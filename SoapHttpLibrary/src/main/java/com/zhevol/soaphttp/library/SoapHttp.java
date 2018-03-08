@@ -239,4 +239,66 @@ public class SoapHttp {
          */
         void onFailed(Exception e);
     }
+
+
+//    // 使用dom4j解析xml
+////    Document doc = DocumentHelper.parseText(xml);
+//    public void readStringXml(String xml) {
+//        Document doc = null;
+//        try {
+//            // 读取并解析XML文档，SAXReader就是一个管道，用一个流的方式，把xml文件读出来
+//            SAXReader reader = new SAXReader();
+//            new ForFile().createFile("axml.xml", xml);
+//            doc = reader.read(new File("/storage/emulated/0/PT123/axml.xml"));
+//            Element rootElt = doc.getRootElement(); // 获取根节点
+//            Log.d(TAG, "根节点的名称: " + rootElt.getName());
+//            String isSuccessed = rootElt.element("IsSuccessed").getText();
+//            String errorMsg = rootElt.element("ErrorMsg").getText();
+//            String ipdNo = rootElt.element("IpdNo").getText();
+//            String patientName = rootElt.element("PatientName").getText();
+//            String station = rootElt.element("Station").getText();
+//            String ctzDesc = rootElt.element("CtzDesc").getText();
+//            String bed = rootElt.element("Bed").getText();
+//            String price = rootElt.element("Price").getText();
+//            String deptCode = rootElt.element("DeptCode").getText();
+//            String totalPrice = rootElt.element("TotalPrice").getText();
+//            strArr = new String[]{isSuccessed, errorMsg, ipdNo, patientName, station, ctzDesc, bed, price, deptCode, totalPrice};
+////            list.add(isSuccessed);
+////            list.add(errorMsg);
+////            list.add(ipdNo);
+////            list.add(patientName);
+////            list.add(station);
+////            list.add(ctzDesc);
+////            list.add(bed);
+////            list.add(price);
+////            list.add(deptCode);
+////            list.add(totalPrice);
+//            //取得某节点的单个子节点
+//            Element resultsElm = rootElt.element("Results");// "Results"是节点名
+//            Iterator<Element> iter = resultsElm.elementIterator("Result"); // 获取根节点下的子节点head
+//            // 遍历head节点
+////            List<Listings> list = new ArrayList<Listings>();
+//            while (iter.hasNext()) {
+//                Element element = (Element) iter.next();
+//                String bilDate = element.elementTextTrim("BilDate"); // 拿到head节点下的子节点title值
+//                String feeTypeDesc = element.elementTextTrim("FeeTypeDesc");
+//                String orderDesc = element.elementTextTrim("OrderDesc");
+//                String unitDesc = element.elementTextTrim("UnitDesc");
+//                String ownPrice = element.elementTextTrim("OwnPrice");
+//                String dosageQty = element.elementTextTrim("DosageQty");
+//                String totAmt = element.elementTextTrim("TotAmt");
+//                String execDept = element.elementTextTrim("ExecDept");
+//                String execDate = element.elementTextTrim("ExecDate");
+//                Log.d(TAG, "readStringXml: " + bilDate);
+//                Listings listings = new Listings(bilDate, feeTypeDesc, orderDesc, unitDesc, ownPrice, dosageQty, totAmt, execDept, execDate);
+//                dailyList.add(listings);
+//            }
+//
+//        } catch (DocumentException e) {
+//            e.printStackTrace();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//    }
+
 }
